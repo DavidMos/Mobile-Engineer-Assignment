@@ -9,12 +9,28 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    //MARK: Private Variables
+    private var viewModel: SettingsViewModel
+    private var coordinator: SettingsCoordinator
+    
+    
+    
+    //MARK: INIT
+    init(coordinator: SettingsCoordinator, viewModel: SettingsViewModel, nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.viewModel = viewModel
+        self.coordinator = coordinator
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: View Lyfecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-
 
     /*
     // MARK: - Navigation
